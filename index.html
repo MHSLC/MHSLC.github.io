@@ -1,1 +1,178 @@
-h1<404>\h1
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CHEY STDUIO</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="btn">
+        <p>&nbsp;👇WATCH MY CV👇</p>
+    </div>
+    <div class="top">
+        <a href="https://mhslc.github.io/FPS.html" target="_blank">游戏制作</a>
+        <a href="https://www.luogu.com.cn/contest/71071" target="_blank">比赛网页</a>
+        <a href="https://space.bilibili.com/1709552596?spm_id_from=333.1007.0.0" target="_blank">b站</a>
+        <a href="https://mh-slc.blog.luogu.org/" target="_blank" style="float:right">MH_SLC的博客</a>
+    </div>
+    <div class="content">
+    
+        <h1 class="avr">Give AR/VR Eyes and Brain</h1>
+    </div>
+
+
+    <div class="yinyue">
+        <img class="music" src="./33.png" alt="">
+        <audio autoplay="autoplay" id="audio" loop="loop">
+            <source src="./music1.mp3" type="audio/MP3">
+
+        </audio>
+
+    </div>
+    <div class="row">
+        <div class="centercolumn">
+            <div class="card">
+
+                <h2 id="biaoti">浮生六记卷一</h2><br />
+                <hr />
+                <h4 id="qita">2022 年 1 月 29日</h4>
+
+                <p style="text-indent:2em">开发中...</p>
+                <p style="text-indent:2em">开发中...</p>
+                <p style="text-indent:2em">
+                   开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+            </div>
+            <br /><br />
+            <div class="card">
+                <h2 id="biaoti">开发中...</h2><br />
+                <hr />
+                <h4 id="qita">2020 年 1 月 30日</h4>
+                <p style="text-indent:2em">
+                   开发中...
+
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+                <p style="text-indent:2em">
+                    （开发中...
+                </p>
+                <p style="text-indent:2em">
+                    开发中...
+                </p>
+            </div>
+
+        </div>
+
+
+    </div>
+   
+    
+    <br /><br />
+    <button class="bt" onclick="window.open('https://blog.csdn.net/weixin_51263734')">MY CSDN BLOG</button>
+
+    <script>
+    let mucics = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function() {
+        setTimeout(() => {
+            mucics.play();
+        }, 2000);
+    }, false);
+    </script>
+    
+    <div class="footer">
+        <br />
+        <p>开发中...</p><br />
+        <p>你好 我是风小风</p><br />
+        <a href="https://blog.csdn.net/weixin_51263734" target="_blank"><img class="someimg" src="./hou.png" alt="" width="30"></a>
+        <abbr title="开发中..."><img class="someimg" src="./qq.png" alt="" width="30"></abbr>
+        <abbr title="开发中..."><img class="someimg" src="./mail.png" alt="" width="30"></abbr>
+    </div>
+    <script>
+        //开发中...
+        (function (window, document, undefined) {
+            var hearts = [];
+            window.requestAnimationFrame = (function () {
+                return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimationFrame ||
+				function (callback) {
+				    setTimeout(callback, 1000 / 60);
+				}
+            })();
+            init();
+            function init() {
+                css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
+                attachEvent();
+                gameloop();
+            }
+            function gameloop() {
+                for (var i = 0; i < hearts.length; i++) {
+                    if (hearts[i].alpha <= 0) {
+                        document.body.removeChild(hearts[i].el);
+                        hearts.splice(i, 1);
+                        continue;
+                    }
+                    hearts[i].y--;
+                    hearts[i].scale += 0.004;
+                    hearts[i].alpha -= 0.013;
+                    hearts[i].el.style.cssText = "left:" + hearts[i].x + "px;top:" + hearts[i].y + "px;opacity:" + hearts[i].alpha + ";transform:scale(" + hearts[i].scale + "," + hearts[i].scale + ") rotate(45deg);background:" + hearts[i].color;
+                }
+                requestAnimationFrame(gameloop);
+            }
+            function attachEvent() {
+                var old = typeof window.onclick === "function" && window.onclick;
+                window.onclick = function (event) {
+                    old && old();
+                    createHeart(event);
+                }
+            }
+            function createHeart(event) {
+                var d = document.createElement("div");
+                d.className = "heart";
+                hearts.push({
+                    el: d,
+                    x: event.clientX - 5,
+                    y: event.clientY - 5,
+                    scale: 1,
+                    alpha: 1,
+                    color: randomColor()
+                });
+                document.body.appendChild(d);
+            }
+            function css(css) {
+                var style = document.createElement("style");
+                style.type = "text/css";
+                try {
+                    style.appendChild(document.createTextNode(css));
+                } catch (ex) {
+                    style.styleSheet.cssText = css;
+                }
+                document.getElementsByTagName('head')[0].appendChild(style);
+            }
+            function randomColor() {
+                return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
+            }
+        })(window, document);
+    </script>
+</body>
+</html>
